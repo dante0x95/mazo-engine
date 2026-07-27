@@ -1,0 +1,2 @@
+npm run typecheck
+npx vitest run --changed origin/main
