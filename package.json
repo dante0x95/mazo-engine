@@ -1,6 +1,7 @@
 {
-  "name": "initalproyect-ts",
+  "name": "mazo",
   "type": "module",
+  "private": "true",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -8,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "build": "tsc",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint src",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "prepare": "husky",
     "release": "commit-and-tag-version",
     "dev": "tsx watch --env-file=.env src/index.ts",
@@ -19,6 +20,9 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "lint-staged": {
     "*.{ts,tsx,js}": [
       "eslint --fix"
@@ -41,9 +45,5 @@
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.65.0",
     "vitest": "^4.1.10"
-  },
-  "dependencies": {
-    "pino": "^10.3.1",
-    "zod": "^4.4.3"
   }
 }

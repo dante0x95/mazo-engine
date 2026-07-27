@@ -6,7 +6,7 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   // ── Ignorados globales ──────────────────────────────────────
-  { ignores: ["dist", "coverage", "node_modules", "*.config.js"] },
+  { ignores: ["dist", "coverage", "node_modules", "*.config.js", "*.config.mts"] },
 
   // ── Base JS + TS con chequeo de tipos ───────────────────────
   js.configs.recommended,
